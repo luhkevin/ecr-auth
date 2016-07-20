@@ -1,0 +1,1 @@
+docker run -t --privileged -v /:/host -v $HOME/.aws:/root/.aws -e DOCKER_USER=$(whoami) --name ecr_auth luhkevin/ecr-auth:dev

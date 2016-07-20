@@ -1,0 +1,31 @@
+{
+  "id": "ecr-auth",
+  "cpus": 0.1,
+  "mem": 64,
+  "instances": 1,
+  "constraints": [
+    [
+      "hostname",
+      "UNIQUE"
+    ]
+  ],
+  "acceptedResourceRoles": [
+    "slave_public"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [
+      {
+        "containerPath": "/host",
+        "hostPath": "/",
+        "mode": "RW"
+      }
+    ],
+    "docker": {
+      "image": "luhkevin/ecr-auth:dev",
+      "network": "BRIDGE",
+      "privileged": true,
+      "forcePullImage": true
+    }
+  }
+}
