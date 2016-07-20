@@ -22,7 +22,7 @@
       }
     ],
     "docker": {
-      "image": "luhkevin/ecr-auth:dev",
+      "image": "luhkevin/ecr-auth",
       "network": "BRIDGE",
       "privileged": true,
       "forcePullImage": true
